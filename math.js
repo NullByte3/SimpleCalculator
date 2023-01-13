@@ -1,4 +1,4 @@
-let lastButton = plus
+let lastButton = null
 
 function plus () {
   lastButton = plus
@@ -38,9 +38,12 @@ function multiply () {
   var resultLabel = document.getElementById('result')
   resultLabel.innerHTML = 'Summa on ' + sum
 }
-function clear () {
+function clearMath () {
+  document.getElementById('n1').value = '0'
+  document.getElementById('n2').value = '0'
   var resultLabel = document.getElementById('result')
   resultLabel.innerHTML = 'Summa on ...'
+  lastButton = null
 }
 
 function last () {
